@@ -1,3 +1,2 @@
 # masterclass-21-1
-PLUMED Masterclass 21.I
-Write something here
+Repository of the data for PLUMED Masterclass 21.1
