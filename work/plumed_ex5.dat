@@ -1,0 +1,14 @@
+# Activate MOLINFO functionalities
+MOLINFO STRUCTURE=../data/5-HT1B.pdb
+# make the first 40 N-terminal residues whole
+WHOLEMOLECULES ENTITY0={@mda:{protein and resid 1:40}}
+# alpha-helix content of residues 1-40
+h: ALPHARMSD RESIDUES=1-40 TYPE=OPTIMAL
+# parallel beta-sheet content of residues 1-40
+pb: PARABETARMSD RESIDUES=1-40 TYPE=OPTIMAL
+# antiparallel beta sheet-content of residues 1-40
+ab: ANTIBETARMSD RESIDUES=1-40 TYPE=OPTIMAL
+# now we create a new CV that sums parallel and antiparallel beta-sheet contents
+b: COMBINE ARG=pb,ab PERIODIC=NO
+# Print the alpha-helical content and the *total* beta-sheet content on COLVAR file every step
+PRINT ARG=h,b FILE=COLVAR STRIDE=1

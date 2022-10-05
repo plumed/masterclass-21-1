@@ -1,0 +1,14 @@
+# Geometric center of the ligand
+lig: CENTER ATOMS=6659-6671
+# Geometric center of the first glycan
+g1: CENTER ATOMS=6212-6424
+# Geometric center of the second glycan
+g2: CENTER ATOMS=6425-6658
+
+# Distance between ligand and first glycan
+d1: DISTANCE ATOMS=lig,g1
+# Distance between ligand and second glycan
+d2: DISTANCE ATOMS=lig,g2
+
+# Print the two distances on COLVAR file every step
+PRINT ARG=d1,d2 FILE=COLVAR STRIDE=1

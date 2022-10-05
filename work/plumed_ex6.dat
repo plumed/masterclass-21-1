@@ -1,0 +1,7 @@
+# Activate MOLINFO functionalities
+MOLINFO STRUCTURE=../data/5-HT1B.pdb
+# Here put your PLUMED input file
+#
+#
+# Write coordinates of all the atoms to file after PLUMED transformations
+DUMPATOMS FILE=5-HT1B_aligned.gro ATOMS=1-6684

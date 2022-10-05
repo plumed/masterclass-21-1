@@ -1,0 +1,8 @@
+# Compute gyration radius on CA atoms of the first 40 N-terminal residues:
+r: GYRATION ATOMS=5,22,37,54,66,73,83,100,111,123,137,151,165,177,187,194,205,220,234,258,276,288,305,315,328,347,358,369,381,393,404,421,434,445,456,466,488,500,521,540
+
+# Compute distance between CA atoms of residues 1 and 40
+d: DISTANCE ATOMS=5,540
+
+# Print the two collective variables on COLVAR file every step
+PRINT ARG=5,540 FILE=COLVAR STRIDE=1
