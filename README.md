@@ -302,12 +302,12 @@ As a second example of MOLINFO's capabilities, we will use the advanced atom sel
 MOLINFO STRUCTURE=__FILL__ 
 
 # To use MDAnalysis selection tools:
-r1: GYRATION ATOMS={@mda:{resid __FILL__ and name __FILL__}}
-d1: DISTANCE ATOMS={@mda:{resid __FILL__ and name __FILL__}}
+r1: GYRATION ATOMS=@mda:{resid __FILL__ and name __FILL__}
+d1: DISTANCE ATOMS=@mda:{resid __FILL__ and name __FILL__}
 
 # To use MDTraj selection tools:
-r2: GYRATION ATOMS={@mdt:{resid __FILL__ and name __FILL__}}
-d2: DISTANCE ATOMS={@mdt:{resid __FILL__ and name __FILL__}}
+r2: GYRATION ATOMS=@mdt:{resid __FILL__ and name __FILL__}
+d2: DISTANCE ATOMS=@mdt:{resid __FILL__ and name __FILL__}
 
 # Print all the collective variables on COLVAR file every step
 PRINT ARG=__FILL__ FILE=COLVAR STRIDE=__FILL__
