@@ -17,9 +17,9 @@ flowchart TB;
   B ==> D[Lecture II];
   C -.-> D;
   D --> E[solution];
-  click A "video1" "A lecture that was given on January 18th 2021 as part of the plumed masterclass series that introduces you to the exercises in this lesson"
+  click A "video1" "A lecture that was given on January 18th 2021 as part of the plumed masterclass series that introduces you to the exercises in this lesson";
   click B "INSTRUCTIONS.md" "The instructions for the exercises";
-  click C "notebooks/plumed-pandas.ipynb" "A python notebook file that illustrates how you can use pandas to read in COLVAR files that are generated with PLUMED" 
+  click C "notebooks/plumed-pandas.ipynb" "A python notebook file that illustrates how you can use pandas to read in COLVAR files that are generated with PLUMED"
   click D "video2" "A lecture that was given on January 25th 2021 as part of the plumed masterclass series that goes through the solutions to the exercises in the lesson"
   click E "notebooks/solution.ipynb" "A python notebook file that provides a complete set of solutions to the exercises";
 ```
