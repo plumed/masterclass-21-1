@@ -2,12 +2,12 @@
 MOLINFO STRUCTURE=../data/5-HT1B.pdb
 
 # To use MDAnalysis selection tools:
-r1: GYRATION ATOMS=@mda:{resid 1:40 and name CA}
-d1: DISTANCE ATOMS=@mda:{resid 1 40 and name CA}
+r1: GYRATION ATOMS={@mda:{resid 1:40 and name CA}}
+d1: DISTANCE ATOMS={@mda:{resid 1 40 and name CA}}
 
 # To use MDTraj selection tools:
-r2: GYRATION ATOMS=@mdt:{resid 0 to 39 and name CA}
-d2: DISTANCE ATOMS=@mdt:{resid 0 39 and name CA}
+r2: GYRATION ATOMS={@mdt:{resid 0 to 39 and name CA}]
+d2: DISTANCE ATOMS={@mdt:{resid 0 39 and name CA}}
 
 # Print all the collective variables on COLVAR file every step
 PRINT ARG=r1,d1,r2,d2 FILE=COLVAR STRIDE=1
